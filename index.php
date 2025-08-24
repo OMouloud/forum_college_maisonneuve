@@ -18,8 +18,14 @@ require_once('header.php');
       <div class="post__auteur">
         <h2><?= ($row['titre']); ?></h2>
         <p><?= nl2br(($row['article'])); ?></p>
-        <small class="user">Auteur : <strong><?= ($row['nom_utilisateur']); ?></strong>
-        </small>
+        <p>
+          <small class="user">Auteur : <strong><?= ($row['nom_utilisateur']); ?></strong>
+          </small>
+        </p>
+        <p>
+          <small class="user">Le : <strong><?= ($row['date_creation']); ?></strong>
+          </small>
+        </p>
       </div>
       <div class="post__liens">
         <?php if (isset($_SESSION['id']) && $_SESSION['id'] == $row['utilisateur_id']) : ?>
