@@ -1,0 +1,199 @@
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+} */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #caa52a;
+  margin-bottom: 35px;
+}
+
+.accueil {
+  display: flex;
+  justify-content: start;
+}
+
+.connexion {
+  display: flex;
+  justify-content: end;
+}
+
+nav a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+ul li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-inline: 50px;
+  @media (max-width: 1226px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+h1 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-size: 20px;
+  margin-inline: 50px;
+  font-weight: 500;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px; */
+}
+
+.post__liens {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 20px;
+  margin-inline: 10px;
+}
+
+.post__liens-edit,
+.post__liens-delete {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.post__liens-edit {
+  background-color: blue;
+}
+
+.post__liens-delete {
+  background-color: red;
+}
+
+.post__liens-edit:hover {
+  background-color: darkblue;
+}
+
+.post__liens-delete:hover {
+  background-color: darkred;
+}
+
+.main {
+  margin-top: 20vh;
+}
+.form__user,
+.form__login {
+  width: 300px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style des labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Pour que le padding n'agrandisse pas la largeur */
+}
+
+/* Style du bouton */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.form__post {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input,
+/* textarea, */
+button {
+  margin: 5px 0;
+  padding: 10px;
+}
+.form__post {
+  background: white;
+}
+
+.container__post {
+  margin-inline: 20px;
+}
+
+textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 100%;
+  min-height: 50vh;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+footer {
+  margin-top: 35px;
+  background-color: #caa52a;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+}
